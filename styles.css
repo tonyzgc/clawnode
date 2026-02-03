@@ -1,32 +1,26 @@
-/* ClawNode — Warm Jade Theme (Nest-inspired) */
+/* ClawNode — Warm Jade Theme */
 
 :root {
-    /* Warm neutral palette */
     --bg: #faf9f7;
     --bg-elevated: #ffffff;
     --bg-card: #f5f4f2;
     --bg-warm: #f0eeeb;
     
-    /* Text - warm gray */
     --text: #1a1a1a;
     --text-secondary: #6b6b6b;
     --text-muted: #9a9a9a;
     
-    /* Accent - warm terracotta/coral */
     --accent: #c45c3e;
     --accent-soft: #d97b5c;
     --accent-light: rgba(196, 92, 62, 0.08);
     
-    /* Borders - warm and subtle */
     --border: rgba(0, 0, 0, 0.06);
     --border-hover: rgba(0, 0, 0, 0.12);
     
-    /* Shadows - soft and warm */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.08);
     
-    /* Device colors */
     --device-body: #f8f7f5;
     --device-shadow: rgba(0, 0, 0, 0.08);
     --device-highlight: #ffffff;
@@ -59,7 +53,7 @@ body {
     padding: 0 24px;
 }
 
-/* Navigation - clean and minimal */
+/* Navigation */
 .nav {
     position: fixed;
     top: 0;
@@ -137,7 +131,7 @@ body {
     color: var(--text-muted);
 }
 
-/* Hero - warm and inviting */
+/* Hero */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -166,7 +160,7 @@ body {
     z-index: 1;
 }
 
-/* Device Preview - soft and organic */
+/* Device Preview */
 .device-preview {
     position: relative;
     width: 160px;
@@ -247,7 +241,7 @@ body {
 .hero-subtitle {
     font-size: 17px;
     color: var(--text-secondary);
-    max-width: 460px;
+    max-width: 480px;
     margin: 0 auto 36px;
     line-height: 1.7;
     font-weight: 450;
@@ -275,7 +269,7 @@ body {
     50% { transform: translateX(-50%) translateY(6px); }
 }
 
-/* Buttons - soft and rounded */
+/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -410,9 +404,20 @@ body {
     font-weight: 300;
 }
 
+/* Design Intro */
+.design-intro {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    font-weight: 450;
+    font-style: italic;
+}
+
 /* Design Grid */
 .design-grid {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
 }
 
@@ -435,7 +440,7 @@ body {
 
 .spec-block p {
     color: var(--text-secondary);
-    font-size: 15px;
+    font-size: 14px;
     margin: 5px 0;
     font-weight: 450;
 }
@@ -453,24 +458,25 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .demo-dot.dim {
-    background: #c4d4e0;
-    box-shadow: 0 0 6px rgba(196, 212, 224, 0.4);
+    background: #e8ddd4;
+    box-shadow: 0 0 6px rgba(232, 221, 212, 0.6);
 }
 
 .demo-dot.bright {
-    background: #f5f3f0;
+    background: #faf8f5;
     box-shadow: 
-        0 0 10px rgba(255, 255, 255, 0.6),
-        0 0 20px rgba(255, 255, 255, 0.3),
-        inset 0 0 4px rgba(0, 0, 0, 0.05);
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(250, 248, 245, 0.4),
+        inset 0 0 4px rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .demo-dot.fade {
-    background: linear-gradient(90deg, #f5f3f0, transparent);
+    background: linear-gradient(90deg, #faf8f5, transparent);
 }
 
 /* Cases */
@@ -524,20 +530,23 @@ body {
     width: fit-content;
 }
 
-/* Steps */
+/* Steps - Fixed Centering */
 .steps {
     display: flex;
     justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 48px;
 }
 
 .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    min-width: 120px;
 }
 
 .step-num {
-    display: block;
     width: 44px;
     height: 44px;
     background: var(--accent);
@@ -548,13 +557,23 @@ body {
     justify-content: center;
     font-weight: 600;
     font-size: 15px;
-    margin: 0 auto 14px;
+    margin-bottom: 12px;
     box-shadow: 0 4px 12px rgba(196, 92, 62, 0.25);
+    flex-shrink: 0;
 }
 
-.step span:last-child {
-    color: var(--text-secondary);
+.step-label {
+    display: block;
     font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.step-desc {
+    display: block;
+    font-size: 13px;
+    color: var(--text-secondary);
     font-weight: 450;
 }
 
@@ -684,13 +703,24 @@ body {
         text-align: center;
     }
     
+    .design-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .pricing {
         grid-template-columns: 1fr;
     }
     
     .steps {
         flex-direction: column;
-        gap: 36px;
+        align-items: center;
+        gap: 32px;
+    }
+    
+    .step {
+        min-width: auto;
+        width: 100%;
+        max-width: 200px;
     }
     
     .hero-cta {
@@ -712,9 +742,4 @@ body {
         width: 48px;
         height: 48px;
     }
-}
-
-/* Smooth transitions for theme elements */
-.device-body, .vs-card, .case, .spec-block, .price-card {
-    transition: var(--transition);
 }
