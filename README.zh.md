@@ -32,16 +32,10 @@
 2. 插入 USB-C
 3. 按下说话
 
-## 开源
-
-固件 · 硬件文件 · 协议文档
-
-[github.com/tonyzgc/clawnode](https://github.com/tonyzgc/clawnode)
-
 ## 价格
 
 $89 — 瓷白或砂岩，含 USB-C 线
 
 ---
 
-© 2026 ClawNode — OpenClaw 的开源硬件
+© 2026 ClawNode

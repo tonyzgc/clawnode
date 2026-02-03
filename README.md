@@ -32,16 +32,10 @@ A warm breath when idle. A soft white bloom when listening. Never demanding, alw
 2. Plug in USB-C
 3. Press and speak
 
-## Open Source
-
-Firmware · Hardware files · Protocol docs
-
-[github.com/tonyzgc/clawnode](https://github.com/tonyzgc/clawnode)
-
 ## Price
 
 $89 — Porcelain or Sand, USB-C cable included
 
 ---
 
-© 2026 ClawNode — Open hardware for OpenClaw
+© 2026 ClawNode
