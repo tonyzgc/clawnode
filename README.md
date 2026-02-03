@@ -4,58 +4,44 @@ A warm, minimal voice terminal for OpenClaw.
 
 **Push. Speak. Claw listens.**
 
-ClawNode is a 60mm precision hardware device that sits to the left of your keyboard. Press to talk. No wake words, no screen distraction — just a quiet presence on your desk.
+A smooth disc that rests by your keyboard. No visible microphones, no seams — just pure, warm ceramic. Press to talk.
 
-## Design Philosophy
+## Design
 
-Warm, minimal, refined. Like a smooth stone resting on your desk.
+**Seamless Form**
+⌀60mm of uninterrupted surface. Microphones hidden beneath. No visible holes, no edges, no distractions. Just a smooth stone-like disc that blends into your desk.
 
-- **Porcelain finish** — Soft matte ceramic-coat, warm to the touch
-- **Seamless form** — No visible seams, no sharp edges
-- **Gentle light** — Soft warm glow when idle, gentle white when active
-- **Quiet presence** — Blends naturally into your workspace
+**Warm to Touch**
+Ceramic-coat finish. Feels like stone warmed by the sun. 120g of reassuring presence.
+
+**Gentle Light**
+A warm breath when idle. A soft white bloom when listening. Never demanding, always reassuring.
 
 ## Specs
 
-- **Dimensions**: ⌀60mm × 10-15mm
+- **Dimensions**: ⌀60mm × 12mm
 - **Weight**: ~120g
 - **Material**: CNC aluminum, ceramic-coat finish
-- **Colors**: Porcelain (warm white) / Sand (warm gray)
-- **Connection**: USB-C 2.0 (1.5m braided cable)
-- **Microphone**: Dual MEMS array, 60-100cm pickup range
+- **Colors**: Porcelain (warm white) · Sand (warm gray)
+- **Connection**: USB-C (1.5m braided cable)
+- **Audio**: Dual MEMS mics, 60-100cm range, hidden beneath surface
 
-## Features
+## How It Works
 
-- **Single Purpose**: One button, one function — press to speak
-- **Directional Audio**: Dual MEMS microphone array with beamforming
-- **Zero Config**: Plug and play, driver-free
-- **Status Lighting**: Minimal LED indicators (standby warm glow, active soft white)
-
-## Website
-
-Visit [clawnode.ai](https://clawnode.ai) for more information.
+1. Place it left of your keyboard
+2. Plug in USB-C
+3. Press and speak
 
 ## Open Source
 
-ClawNode extends the OpenClaw ecosystem as open hardware.
+Firmware · Hardware files · Protocol docs
 
-- Firmware source (C++/Arduino)
-- Hardware design files (enclosure CAD, PCB)
-- Communication protocol documentation
+[github.com/tonyzgc/clawnode](https://github.com/tonyzgc/clawnode)
 
-## Development
+## Price
 
-This website is built with vanilla HTML, CSS, and JavaScript. No build step required.
-
-```bash
-# Serve locally
-python3 -m http.server 8000
-```
-
-## License
-
-MIT License - See LICENSE file for details.
+$89 — Porcelain or Sand, USB-C cable included
 
 ---
 
-© 2026 ClawNode — Open hardware for OpenClaw.
+© 2026 ClawNode — Open hardware for OpenClaw
