@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClawNode - Voice Terminal for OpenClaw</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">ClawNode</a>
+            <div class="nav-right">
+                <a href="https://github.com/openclaw/clawnode" class="nav-link" target="_blank">GitHub</a>
+                <button class="lang-switch" id="langSwitch">
+                    <span class="lang-current">EN</span>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-alt">中</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-visual">
+                <div class="device-render">
+                    <div class="device-glow"></div>
+                    <div class="device-body">
+                        <div class="mic-array">
+                            <span class="mic-dot"></span>
+                            <span class="mic-dot"></span>
+                            <span class="mic-dot"></span>
+                            <span class="mic-dot"></span>
+                            <span class="mic-dot"></span>
+                        </div>
+                        <div class="device-center"></div>
+                    </div>
+                    <div class="cable"></div>
+                </div>
+            </div>
+            <h1 class="hero-title" data-en="Push. Speak. Claw listens." data-zh="按下。说话。Claw 听见。">
+                Push. Speak. Claw listens.
+            </h1>
+            <p class="hero-subtitle" data-en="ClawNode is a desktop voice terminal for OpenClaw. A 60mm precision hardware piece that sits to the left of your keyboard. Press to talk. No wake words, no screen distraction, pure physical interaction." data-zh="ClawNode 是 OpenClaw 的桌面语音终端。直径 6 厘米的精密硬件，置于键盘左侧，按下即说。没有唤醒词，没有屏幕干扰，纯粹的物理交互。">
+                ClawNode is a desktop voice terminal for OpenClaw. A 60mm precision hardware piece that sits to the left of your keyboard. Press to talk. No wake words, no screen distraction, pure physical interaction.
+            </p>
+            <div class="hero-cta">
+                <a href="#pricing" class="btn btn-primary" data-en="Preorder $89" data-zh="预订 $89">Preorder $89</a>
+                <a href="https://github.com/openclaw/clawnode" class="btn btn-secondary" target="_blank">GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Positioning Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <blockquote class="quote" data-en="Free &quot;talking to AI&quot; from the screen. Turn it into a physical action on your desk." data-zh="把「和 AI 对话」从屏幕里解放出来，变成桌面上的一个实体动作。">
+                Free "talking to AI" from the screen. Turn it into a physical action on your desk.
+            </blockquote>
+            
+            <div class="comparison">
+                <div class="comparison-item">
+                    <h3 data-en="Software Voice Input" data-zh="软件语音输入">Software Voice Input</h3>
+                    <ul>
+                        <li data-en="Find window → click input box → wait" data-zh="找窗口 → 点击输入框 → 等识别">Find window → click input box → wait</li>
+                        <li data-en="Unsure if AI is listening" data-zh="不知道 AI 是否在听">Unsure if AI is listening</li>
+                        <li data-en="Breaks current workflow" data-zh="打断当前工作流">Breaks current workflow</li>
+                    </ul>
+                </div>
+                <div class="comparison-arrow">→</div>
+                <div class="comparison-item highlight">
+                    <h3>ClawNode</h3>
+                    <ul>
+                        <li data-en="Press disc → speak directly" data-zh="按下圆盘 → 直接说话">Press disc → speak directly</li>
+                        <li data-en="Panel glow = confirmation" data-zh="面板亮起 = 确认收音">Panel glow = confirmation</li>
+                        <li data-en="Hands on desk, eyes on screen" data-zh="手不离桌面，眼不离屏幕">Hands on desk, eyes on screen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Design" data-zh="设计">Design</h2>
+            
+            <div class="design-grid">
+                <div class="design-card">
+                    <h3 data-en="Form" data-zh="形态">Form</h3>
+                    <ul class="spec-list">
+                        <li><span data-en="Dimensions:" data-zh="尺寸：">Dimensions:</span> ⌀60mm × 10-15mm</li>
+                        <li><span data-en="Placement:" data-zh="位置：">Placement:</span> <span data-en="Left of keyboard, natural left-hand reach" data-zh="键盘左侧，左手自然可及">Left of keyboard, natural left-hand reach</span></li>
+                        <li><span data-en="Material:" data-zh="材质：">Material:</span> <span data-en="CNC aluminum unibody, anodized finish" data-zh="铝合金 CNC 一体成型，阳极氧化">CNC aluminum unibody, anodized finish</span></li>
+                        <li><span data-en="Feel:" data-zh="质感：">Feel:</span> <span data-en="Substantial weight, silent keypress, micro beveled edge" data-zh="沉稳压手，静音按键，微弧倒角">Substantial weight, silent keypress, micro beveled edge</span></li>
+                    </ul>
+                </div>
+                
+                <div class="design-card">
+                    <h3 data-en="Lighting" data-zh="光效">Lighting</h3>
+                    <div class="lighting-table">
+                        <div class="lighting-row">
+                            <span class="lighting-indicator standby"></span>
+                            <span class="lighting-state" data-en="Standby" data-zh="待机">Standby</span>
+                            <span class="lighting-desc" data-en="Dim base glow — indicates connection only" data-zh="底部微光 — 仅表示已连接">Dim base glow — indicates connection only</span>
+                        </div>
+                        <div class="lighting-row">
+                            <span class="lighting-indicator active"></span>
+                            <span class="lighting-state" data-en="Pressed" data-zh="按下">Pressed</span>
+                            <span class="lighting-desc" data-en="White panel glow — confirms recording" data-zh="面板白光 — 确认收音中">White panel glow — confirms recording</span>
+                        </div>
+                        <div class="lighting-row">
+                            <span class="lighting-indicator fade"></span>
+                            <span class="lighting-state" data-en="Release" data-zh="松手">Release</span>
+                            <span class="lighting-desc" data-en="Fading breath — send complete" data-zh="呼吸渐暗 — 发送完成">Fading breath — send complete</span>
+                        </div>
+                    </div>
+                    <p class="design-note" data-en="Principle: Light confirms status, never demands attention." data-zh="原则：光是为了确认，不是为了吸引注意力。">
+                        Principle: Light confirms status, never demands attention.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title" data-en="Features" data-zh="功能">Features</h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Single Purpose" data-zh="单点专注">Single Purpose</h3>
+                    <p data-en="One function: press to speak. Full-disc pressure key with tactile confirmation. Release to send, no second confirmation needed." data-zh="只有一个功能：按下说话。整盘下压式按键，触觉确认。松手即发送，无需二次确认。">
+                        One function: press to speak. Full-disc pressure key with tactile confirmation. Release to send, no second confirmation needed.
+                    </p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" y1="19" x2="12" y2="23"/>
+                            <line x1="8" y1="23" x2="16" y2="23"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Directional Audio" data-zh="定向收音">Directional Audio</h3>
+                    <p data-en="Dual MEMS microphone array with beamforming. Optimized range: 60-100cm for desktop use. Activates only when pressed, immune to ambient noise." data-zh="双麦克风阵列，波束成形。优化距离：60-100cm（桌面使用场景）。按下才激活收音，环境噪音免疫。">
+                        Dual MEMS microphone array with beamforming. Optimized range: 60-100cm for desktop use. Activates only when pressed, immune to ambient noise.
+                    </p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Zero Config" data-zh="零配置">Zero Config</h3>
+                    <p data-en="USB-C wired connection, driver-free. Auto-detect on plug, no pairing required. Firmware OTA updates." data-zh="USB-C 有线连接，免驱。插入自动识别，无需配对。固件 OTA 升级。">
+                        USB-C wired connection, driver-free. Auto-detect on plug, no pairing required. Firmware OTA updates.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Use Cases" data-zh="使用场景">Use Cases</h2>
+            
+            <div class="cases">
+                <div class="case-item">
+                    <h3 data-en="Flow State Protection for Developers" data-zh="开发者的流状态保护">Flow State Protection for Developers</h3>
+                    <p data-en="Writing code, press ClawNode with left hand: &quot;Add an LRU cache in utils.js&quot; — hands never leave the keyboard zone, Claw modifies in background." data-zh="正在写代码，左手按下 ClawNode：&quot;在 utils.js 里加一个 LRU 缓存&quot; —— 手不离键盘区域，Claw 在后台完成修改。">
+                        Writing code, press ClawNode with left hand: "Add an LRU cache in utils.js" — hands never leave the keyboard zone, Claw modifies in background.
+                    </p>
+                </div>
+                
+                <div class="case-item">
+                    <h3 data-en="Quick Notes During Meetings" data-zh="会议中的快速记录">Quick Notes During Meetings</h3>
+                    <p data-en="In a video call, client mentions next week's deadline. Press ClawNode: &quot;Create task: deliver prototype, due next Wednesday, high priority&quot; — eyes never leave the screen." data-zh="视频会议中，客户提到下周交付。按下 ClawNode：&quot;创建任务：交付原型，下周三截止，高优先级&quot; —— 目光从未离开屏幕。">
+                        In a video call, client mentions next week's deadline. Press ClawNode: "Create task: deliver prototype, due next Wednesday, high priority" — eyes never leave the screen.
+                    </p>
+                </div>
+                
+                <div class="case-item">
+                    <h3 data-en="Dictation Writing" data-zh="口述写作">Dictation Writing</h3>
+                    <p data-en="Stuck on a document. Press ClawNode, dictate your thoughts — release, text appears at cursor, Claw handles punctuation." data-zh="写文档卡住了。按下 ClawNode，直接口述思路 —— 说完松手，文字出现在光标处，Claw 已做好标点。">
+                        Stuck on a document. Press ClawNode, dictate your thoughts — release, text appears at cursor, Claw handles punctuation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title" data-en="Specs" data-zh="规格">Specs</h2>
+            
+            <div class="specs-table">
+                <div class="spec-row">
+                    <span class="spec-label" data-en="Form" data-zh="外形">Form</span>
+                    <span class="spec-value" data-en="Circular disc" data-zh="圆形盘状">Circular disc</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label" data-en="Dimensions" data-zh="尺寸">Dimensions</span>
+                    <span class="spec-value">⌀60mm × 10-15mm</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label" data-en="Weight" data-zh="重量">Weight</span>
+                    <span class="spec-value">~120g</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label" data-en="Material" data-zh="材质">Material</span>
+                    <span class="spec-value" data-en="CNC aluminum, anodized" data-zh="铝合金 CNC，阳极氧化">CNC aluminum, anodized</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label" data-en="Connection" data-zh="连接">Connection</span>
+                    <span class="spec-value" data-en="USB-C 2.0 (1.5m L-shaped cable)" data-zh="USB-C 2.0（1.5m L型线）">USB-C 2.0 (1.5m L-shaped cable)</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label" data-en="Microphone" data-zh="麦克风">Microphone</span>
+                    <span class="spec-value" data-en="Dual MEMS array" data-zh="双 MEMS 阵列">Dual MEMS array</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label" data-en="Pickup range" data-zh="收音距离">Pickup range</span>
+                    <span class="spec-value">60-100cm</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">LED</span>
+                    <span class="spec-value" data-en="Dim base glow + white panel zone" data-zh="底部微光 + 面板白光区">Dim base glow + white panel zone</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label" data-en="Key" data-zh="按键">Key</span>
+                    <span class="spec-value" data-en="Full-disc pressure, silent micro switch" data-zh="整盘下压式，静音微动">Full-disc pressure, silent micro switch</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label" data-en="Compatibility" data-zh="兼容">Compatibility</span>
+                    <span class="spec-value">macOS / Windows / Linux</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label" data-en="Requirement" data-zh="依赖">Requirement</span>
+                    <span class="spec-value">OpenClaw service</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Open Source" data-zh="开源">Open Source</h2>
+            
+            <p class="opensource-intro" data-en="ClawNode extends the OpenClaw ecosystem as open hardware." data-zh="ClawNode 是 OpenClaw 生态的硬件延伸。">
+                ClawNode extends the OpenClaw ecosystem as open hardware.
+            </p>
+            
+            <div class="opensource-grid">
+                <div class="opensource-card">
+                    <h3 data-en="Open Content" data-zh="开源内容">Open Content</h3>
+                    <ul>
+                        <li data-en="Firmware source (C++/Arduino)" data-zh="固件源码（C++/Arduino）">Firmware source (C++/Arduino)</li>
+                        <li data-en="Hardware design files (enclosure CAD, PCB)" data-zh="硬件设计文件（外壳 CAD、PCB）">Hardware design files (enclosure CAD, PCB)</li>
+                        <li data-en="Communication protocol documentation" data-zh="通信协议文档">Communication protocol documentation</li>
+                    </ul>
+                </div>
+                <div class="opensource-card">
+                    <h3 data-en="Developer Friendly" data-zh="开发者友好">Developer Friendly</h3>
+                    <ul>
+                        <li data-en="Customizable button behavior" data-zh="支持自定义按键行为">Customizable button behavior</li>
+                        <li data-en="Extensible LED patterns" data-zh="可扩展 LED 模式">Extensible LED patterns</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="opensource-cta">
+                <a href="https://github.com/openclaw/clawnode" class="btn btn-secondary" target="_blank">GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title" data-en="Get Started" data-zh="上手">Get Started</h2>
+            
+            <div class="box-contents">
+                <h3 data-en="Box Contents" data-zh="包装清单">Box Contents</h3>
+                <ul class="contents-list">
+                    <li>ClawNode <span data-en="unit" data-zh="主机">unit</span></li>
+                    <li>USB-C L-shaped <span data-en="braided cable (1.5m)" data-zh="编织线（1.5m）">braided cable (1.5m)</span></li>
+                    <li data-en="Quick start guide" data-zh="快速上手指南">Quick start guide</li>
+                </ul>
+            </div>
+            
+            <div class="steps">
+                <h3 data-en="Three Steps" data-zh="三步开始">Three Steps</h3>
+                <div class="steps-grid">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <span class="step-action" data-en="Place" data-zh="放">Place</span>
+                        <span class="step-desc" data-en="Position left of keyboard" data-zh="置于键盘左侧">Position left of keyboard</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <span class="step-action" data-en="Plug" data-zh="插">Plug</span>
+                        <span class="step-desc" data-en="USB-C to computer" data-zh="USB-C 连接电脑">USB-C to computer</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <span class="step-action" data-en="Press" data-zh="按">Press</span>
+                        <span class="step-desc" data-en="Base glows dim, press to speak" data-zh="底部微光亮起，按下即说">Base glows dim, press to speak</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <h2 class="section-title" data-en="Pricing" data-zh="定价">Pricing</h2>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>ClawNode</h3>
+                    <div class="price">$89</div>
+                    <ul>
+                        <li data-en="Standard edition" data-zh="标准版">Standard edition</li>
+                        <li data-en="Space Gray / Silver" data-zh="深空灰 / 银色">Space Gray / Silver</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" data-en="Preorder" data-zh="预订">Preorder</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge" data-en="Dev Kit" data-zh="开发套件">Dev Kit</div>
+                    <h3>ClawNode Dev Kit</h3>
+                    <div class="price">$109</div>
+                    <ul>
+                        <li data-en="Developer documentation" data-zh="开发者文档">Developer documentation</li>
+                        <li data-en="Extra enclosure (for customization)" data-zh="额外外壳（用于自定义）">Extra enclosure (for customization)</li>
+                        <li data-en="Priority support" data-zh="优先支持">Priority support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" data-en="Preorder" data-zh="预订">Preorder</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 ClawNode — <span data-en="Open hardware for OpenClaw" data-zh="OpenClaw 的开源硬件">Open hardware for OpenClaw</span></p>
+            <div class="footer-links">
+                <a href="https://github.com/openclaw/clawnode" target="_blank">GitHub</a>
+                <span class="separator">·</span>
+                <a href="https://docs.clawnode.ai" target="_blank">Documentation</a>
+                <span class="separator">·</span>
+                <a href="https://openclaw.ai" target="_blank">OpenClaw</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
