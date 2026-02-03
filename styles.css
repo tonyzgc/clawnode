@@ -1,4 +1,4 @@
-/* ClawNode — Warm Minimal Theme (Unified Background) */
+/* ClawNode — Warm Minimal Theme */
 
 :root {
     --bg: #faf9f7;
@@ -117,7 +117,7 @@ body {
 
 .hero-content { position: relative; z-index: 1; }
 
-/* Device - Seamless */
+/* Device */
 .device-preview {
     position: relative;
     width: 160px;
@@ -201,20 +201,7 @@ body {
     box-shadow: 0 6px 20px rgba(196, 92, 62, 0.3);
 }
 
-.btn-ghost {
-    background: var(--bg-card);
-    color: var(--text-secondary);
-    border: 1px solid var(--border);
-}
-
-.btn-ghost:hover {
-    border-color: var(--text-muted);
-    color: var(--text);
-}
-
-.btn-large { padding: 16px 40px; font-size: 16px; }
-
-/* Sections - Unified Background */
+/* Sections */
 .section { padding: 80px 0; }
 
 .section + .section {
@@ -363,33 +350,35 @@ body {
     border: 1px solid var(--border);
 }
 
-/* Cases - Horizontal */
-.cases-horizontal {
+/* Cases - Vertical List */
+.cases-list {
     display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    padding-bottom: 8px;
-    margin: 0 -24px;
-    padding-left: 24px;
-    padding-right: 24px;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.case-card {
-    flex: 0 0 260px;
+.case-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 28px;
     box-shadow: var(--shadow);
 }
 
-.case-icon {
-    font-size: 28px;
-    margin-bottom: 14px;
+.case-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-top: 8px;
+    flex-shrink: 0;
 }
 
-.case-card p {
-    font-size: 14px;
+.case-item p {
+    font-size: 15px;
     color: var(--text-secondary);
     line-height: 1.7;
 }
@@ -439,19 +428,9 @@ body {
 }
 
 .footer p {
-    font-size: 15px;
-    color: var(--text);
-    margin-bottom: 8px;
-}
-
-.footer-links a {
     font-size: 14px;
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: var(--transition);
+    color: var(--text-muted);
 }
-
-.footer-links a:hover { color: var(--text); }
 
 /* Responsive */
 @media (max-width: 640px) {
@@ -471,17 +450,6 @@ body {
         flex-direction: column;
         text-align: center;
         gap: 16px;
-    }
-    
-    .cases-horizontal {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .case-card {
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 320px;
     }
     
     .setup-simple {
