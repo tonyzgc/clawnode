@@ -48,4 +48,4 @@ MIT License - See LICENSE file for details.
 
 ---
 
-© 2025 ClawNode — Open hardware for OpenClaw.
+© 2026 ClawNode — Open hardware for OpenClaw.
